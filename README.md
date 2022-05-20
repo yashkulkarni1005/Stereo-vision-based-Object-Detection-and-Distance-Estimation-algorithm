@@ -5,11 +5,11 @@ INTRODUCTION:
 
 In present world object detection and distance estimation in Autonomous vehicles (AVs) play a 
 pivotal role. In order to prevent the collision in autonomous vehicle there is a need for an 
-intelligence that is to be given to autonomous vehicles so that vehicle can identify the object 
-ahead, cla.ssify them and estimate the distance of object as well. In order to achieve this present 
+intelligence that is to be given to autonomous vehicles so that vehicle can identify the objects 
+ahead, classify them and estimate the distance of objects as well. In order to achieve this present 
 system heavily rely on LIDAR, RADAR and cameras. Even though LIDAR sensors are widely used in 
 present autonomous vehicles when compared to camera based system there are some disadvantage like 
-higher cost and shorter perception range .In order to overcome these disadvantages LIDAR, We 
+higher cost and shorter perception range .In order to overcome these disadvantages of LIDAR, we 
 propose an algorithm to calculate the distance of the detected object and implementing on the 
 Nvidia ACX development kit with help of Intel Realsense D-435 stereo camera.
 
@@ -23,9 +23,9 @@ OBJECTIVES:
 
 • Camera calibration and Rectification.
 
-• Computation of Disparity map .
+• Computation of Disparity map.
 
-• Object detection and classification from the RCB images.
+• Object detection and classification from the RGB images.
 
 • Distance estimation of the classified objects.
 
@@ -56,14 +56,14 @@ Algorithm follows 2 steps:
 
 We have used SSD (Single Shot Detection) algorithm which follows VGG-16 architecture.  It consists 
 of alternative convolution and max pooling layers (deeper the layers more features will be 
-extracted). Rectified images is passed through there convolution and pooling layer and we get 
-probaility distribution for each class across soft max layer. Then we draw bounding boxes to object 
+extracted). Rectified images are passed through  convolution and pooling layer and we get 
+probaility distribution for each class across softmax layer. Then we draw bounding boxes to objects 
 classified.
 
 4.Distance Estimation:
 
 We know the values of focal length,Baseline and we calculated the disparity values,focal length in 
-mm is converted to pixel values and then by using the below formula we estimate the distance.
+mm is converted to pixel values and then by using the below formula we estimate the distance:
 
 Distance=F*B/Disparity_value.
 
@@ -79,6 +79,5 @@ In the above work we were successfully able to identify the objects and classify
 the distance of the detected object from camera. In order to achieve this we first divided our 
 problem statement into various stage and tried to obtain optimized model for respective stages and 
 in the end we combined all the optimized model to obtain the desired results.We have considered 
-inputs with respect to different distance from the camera and calculated the average distance 
-calculated from our algorithm when compared to actual distance,We have also shown the deviation at 
-different distance.
+inputs with respect to different distances from the camera and calculated the average distance 
+from our algorithm and later it compared to actual distance,we have obtained  results with deviation  of 0.2mtrs.
