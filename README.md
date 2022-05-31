@@ -1,5 +1,5 @@
 # Stereo-vision-based-Object-Detection-and-Distance-Estimation-Algorithm.
-In this project we try to capture images from Intel RealSense D-435 stereo camera ,try to identify the objects in the image like pedestrians &amp; various vehicles in image and try to estimate the distance of these objects from the camera.
+In this project we try to capture images from Intel RealSense D-435 stereo camera ,try to identify various objects in the image (like pedestrians & various types of vehicles)  and try to estimate the distance of these objects from the camera.
 
 INTRODUCTION:
 
